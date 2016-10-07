@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="Albert_Alves.telaPrincipal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Albert_Alves"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Previous" Label="Logout" Click="AppBarButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="button" Content="Boletim" HorizontalAlignment="Left" Margin="138,200,0,0" VerticalAlignment="Top" Width="92"/>
+        <Button x:Name="button1" Content="Frequência" HorizontalAlignment="Left" Margin="138,283,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button2" Content="Provas" HorizontalAlignment="Left" Margin="138,358,0,0" VerticalAlignment="Top" Width="92"/>
+
+    </Grid>
+</Page>

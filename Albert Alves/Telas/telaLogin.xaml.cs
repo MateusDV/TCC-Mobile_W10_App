@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -20,11 +21,27 @@ namespace Albert_Alves
     /// <summary>
     /// Uma página vazia que pode ser usada isoladamente ou navegada dentro de um Quadro.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class telaLogin : Page
     {
-        public MainPage()
+        public telaLogin()
         {
             this.InitializeComponent();
         }
-    }
+
+		private async void button_Click(object sender, RoutedEventArgs e)
+		{
+			if(textBox.Text.Equals("abc") && textBox1.Text.Equals("123"))
+			{
+				var msg = new MessageDialog("foi");
+				await msg.ShowAsync();
+
+				this.Frame.Navigate(typeof(telaPrincipal));
+			}
+			else
+			{
+				var msg = new MessageDialog("NÃO FOI");
+				await msg.ShowAsync();
+			}
+		}
+	}
 }
